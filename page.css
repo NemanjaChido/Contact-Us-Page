@@ -79,7 +79,6 @@ label{
     display: flex;
     flex-direction: column;
     padding: 2% 0;
-    border: 1px dotted red;
 }
 .query-type label{
     font-size: 0.7rem;
