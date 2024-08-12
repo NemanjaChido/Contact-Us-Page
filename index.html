@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="page.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+  </head>
+  <body>
+    <section class="wrapper">
+      <h2>Contact Us</h2>
+      <form action="" id="contact-form">
+        <div class="name">
+          <div class="inputBox">
+            <label for="firstname">First Name *</label>
+            <input type="text" name="firstname" id="firstname" />
+            <p class="error"></p>
+          </div>
+          <div class="inputBox">
+            <label for="lastname">Last Name *</label>
+            <input type="text" name="lastname" id="lastname" />
+            <p class="error"></p>
+          </div>
+        </div>
+        <div class="inputBox email">
+          <label for="email">Email Address *</label>
+          <input type="email" name="email" id="email" />
+          <p class="error"></p>
+        </div>
+        <div class="query-type">
+          <label for="checkbox">Query Type *</label>
+          <div class="inputBox Query-wrapper">
+            <button type="button" class="general-enquiry-btn">
+              <span class="query-check-box"
+                ><img src="image/icon-radio-selected.svg" alt="" /></span
+              >General Enquiry
+            </button>
+            <button type="button" class="support-request-btn">
+              <span class="query-check-box2"
+                ><img src="image/icon-radio-selected.svg" alt="" /></span
+              >Support Request
+            </button>
+            <p class="error query-error"></p>
+          </div>
+        </div>
+        <div class="inputBox text">
+          <label for="textarea">Message *</label>
+          <textarea type="text" name="textarea" id="textarea"></textarea>
+          <p class="error"></p>
+        </div>
+        <div class="checkbox-wrapper">
+          <div class="inputBox contact-us-container">
+            <span class="consent-box"
+              ><img src="image/icon-checkbox-check.svg" alt=""
+            /></span>
+            <p class="label">I consent to being contacted by the team *</p>
+            <p class="error contact-error"></p>
+          </div>
+        </div>
+        <button class="submit-btn" type="submit" value="submit">Submit</button>
+      </form>
+    </section>
+    <section class="alert">
+      <div class="alert-wrapper">
+        <span class="icon-wrapper"
+          ><img src="image/icon-success-check.svg" alt="" />Message Sent!</span
+        >
+        <p>Thanks for completing the form. We'll be in touch soon!</p>
+        <span class="next"><i class="bi bi-arrow-right"></i></span>
+      </div>
+    </section>
+    <script src="page.js"></script>
+  </body>
+</html>

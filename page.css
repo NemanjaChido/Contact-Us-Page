@@ -1,0 +1,385 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+   --Green-200: hsl(148, 38%, 91%);
+   --Green: hsl(169, 82%, 27%);
+   --Red: hsl(0, 66%, 54%);
+   --White: hsl(0, 0%, 100%);
+   --Grey-500: hsl(186, 15%, 59%);
+   --Grey-900: hsl(187, 24%, 22%);
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--Green-200);
+}
+
+.wrapper{
+    width: 50%;
+    height: 90%;
+    padding: 1.5%;
+    background-color: var(--White);
+    border-radius: 8px;
+}
+
+.wrapper h2{
+    margin-bottom: 2%;
+    color: var(--Grey-900);
+    font-size: 1.3rem;
+}
+
+.name{
+    width: 100%;
+    height: 15%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1% 0;
+}
+
+label{
+    color: var(--Grey-900);
+    font-size: 0.8rem;
+    letter-spacing: 1.3px;
+}
+.name .inputBox{
+    width: 48%;
+}
+.name .inputBox input{
+    width: 100%;
+    padding: 2%;
+    border-radius: 6px;
+    border: 1px solid var(--Grey-500);
+}
+
+.email{
+    width: 100%;
+    height: 10%;
+}
+.email input{
+    width: 100%;
+    padding: 2%;
+    border-radius: 6px;
+    border: 1px solid var(--Grey-500);
+}
+
+.query-type{
+    width: 100%;
+    height: 30%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 2% 0;
+    border: 1px dotted red;
+}
+.query-type label{
+    font-size: 0.7rem;
+}
+
+.query-type .Query-wrapper{
+    width: 100%;
+    height: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.query-error{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+
+.Query-wrapper .general-enquiry-btn,
+.Query-wrapper .support-request-btn{
+    position: relative;
+    border: 1px solid var(--Grey-500);
+    width: 48%;
+    height: 80%;
+    padding: 2%;
+    color: var(--Grey-900);
+    border-radius: 6px;
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.query-check-box,
+.query-check-box2{
+    display: flex;
+    width: 5%;
+    height: 40%;
+    border-radius: 50%;
+    border: 1px solid var(--Grey-500);
+    margin-right: 3%;
+}
+.Query-wrapper .query-check-box img,
+.Query-wrapper .query-check-box2 img{
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+}
+
+.text{
+    width: 100%;
+    height: 30%;
+    padding: 2% 0;
+    display: flex;
+    flex-direction: column;
+}
+.text textarea{
+    width: 100%;
+    height: 90%;
+    border-radius: 6px;
+    padding: 2%;
+    border: 1px solid var(--Grey-500);
+}
+.text textarea:focus{
+    border: 1px solid var(--Grey-500);
+}
+
+.checkbox-wrapper{
+    width: 100%;
+    height: 8%;
+    padding: 2% 0;
+    margin-bottom: 2%;
+    position: relative;
+
+}
+.contact-us-container{
+    height: 100%;
+    width: 100%;
+    font-size: 0.8rem;
+    color: var(--Grey-900);
+    display: flex;
+    flex-direction: row;
+}
+
+.contact-us-container .consent-box{
+    margin-right: 2%;
+    border: 1px solid var(--Grey-500);
+    display: flex;
+    width: 3%;
+    height: 3%;
+}
+.contact-us-container .consent-box img{
+    visibility: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+.contact-us-container .label{
+    color: var(--Grey-900);
+}
+
+.contact-error{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.submit-btn{
+    width: 100%;
+    padding: 2%;
+    background-color: var(--Green);
+    color: var(--White);
+    border: none;
+    border-radius: 5px;
+}
+.error{
+    color: var(--Red);
+    font-size: 0.7rem;
+    letter-spacing: 1.2px;
+    display: inline-block;
+    visibility: hidden;
+    margin-top: 0;
+}
+
+
+.inputBox.success input{
+    border-color: var(--Green);
+}
+
+.inputBox.failed input{
+    border-color: var(--Red);
+}
+.inputBox.failed .error{
+    visibility: visible;
+}
+
+.Query-wrapper.checkbox .general-enquiry-btn,
+.Query-wrapper.support-request-checkbox .support-request-btn{
+    border: 1px solid var(--Green);
+    background-color: var(--Green-200);
+}
+
+.Query-wrapper.checkbox .general-enquiry-btn .query-check-box img,
+.Query-wrapper.support-request-checkbox .support-request-btn .query-check-box2 img{
+    visibility: visible;
+}
+.contact-us-container.checkbox .consent-box img{
+    visibility: visible;
+}
+.alert{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+
+    visibility: hidden;
+}
+
+.alert.displayalert{
+    visibility: visible;
+}
+
+.alert .alert-wrapper{
+    position: absolute;
+    top: 1%;
+    right: 30%;
+    height: 25%;
+    width: 25%;
+    background-color: var(--Grey-900);
+    color: var(--White);
+    padding: 2%;
+}
+
+.alert .alert-wrapper .icon-wrapper{
+    display: flex;
+    align-items: center;
+    gap: 3%;
+    margin-bottom: 3%;
+}
+.alert .alert-wrapper p{
+    font-size: 0.6rem;
+}
+.alert .alert-wrapper .next{
+    height: 40%;
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.8);
+    font-size: 0.6rem;
+    position: relative;
+    top: 20%;
+    left: 80%;
+}
+
+@media only screen and (max-width: 768px){
+    .query-type{
+        padding: 3% 0;
+    }
+    .Query-wrapper .general-enquiry-btn,
+    .Query-wrapper .support-request-btn{
+        font-size: 0.7rem;
+    }
+    .error{
+        font-size: 0.6rem;
+    }
+
+    .alert .alert-wrapper{
+        width: 40%;
+    }
+    .alert .alert-wrapper .next{
+        height: 30%;
+        left: 60%;
+    }
+}
+
+@media only screen and (max-width: 426px){
+    .wrapper{
+        width: 95%;
+        height: 95%;
+    }
+    .wrapper h2{
+        font-size: 0.8rem;
+    }
+    .name{
+        flex-direction: column;
+        padding: 0;
+        height: 10%;
+    }
+    .name .inputBox{
+        width: 100%;
+    }
+    .name .inputBox input{
+        padding: 1%;
+    }
+    .email input{
+        padding: 1%;
+    }
+    .query-type .Query-wrapper{
+        flex-direction: column;
+        height: 50%;
+        gap: 5px;
+    }
+    .Query-wrapper .general-enquiry-btn,
+    .Query-wrapper .support-request-btn{
+        width: 100%;
+        padding: 1.5% 5%;
+        font-size: 0.6rem;
+    }
+    .query-error{
+        bottom: -3%;
+    }
+
+    .query-check-box,
+    .query-check-box2{
+        height: 10%;
+        width: 3%;
+    }
+    
+    label{
+        font-size: 0.6rem;
+    }
+    .text{
+        padding: 0.5% 0;
+        height: 40%;
+    }
+    .text textarea{
+        font-size: 0.6rem;
+    }
+    .contact-us-container .consent-box{
+        width: 2.5%;
+        height: 2.5%;
+    }
+
+    .alert .alert-wrapper .icon-wrapper{
+        font-size: 0.8rem;   
+    }
+    .alert .alert-wrapper .next{
+        width: 30%;
+    }
+
+}
+
+@media only screen and (max-width: 320px){
+    .query-type{
+        padding: 4% 0;
+    }
+    .query-type .Query-wrapper{
+        gap: 6px;
+    }
+    .Query-wrapper .general-enquiry-btn,
+    .Query-wrapper .support-request-btn{
+        padding: 2% 5%;
+    }
+    .text{
+        padding: 1% 0;
+    }
+}
